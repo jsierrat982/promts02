@@ -32,6 +32,27 @@
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 }
 
+html[data-theme="dark"] {
+  --paper: #10233a;
+  --paper-raised: #16304d;
+  --ink: #eaf1f7;
+  --ink-soft: #93aac0;
+  --rule: #2b4966;
+  --rule-strong: #3f6689;
+
+  --accent: #e0a052;
+  --accent-ink: #ffe6bd;
+  --accent-bg: #3a2c15;
+
+  --stamp: #6fc0ac;
+  --stamp-bg: #163731;
+
+  --alert: #e07d76;
+  --alert-bg: #3a201e;
+}
+
+html[data-theme="dark"] .modal::backdrop { background: rgba(5, 12, 22, 0.65); }
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -42,6 +63,19 @@ html, body {
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.5;
+}
+
+body,
+.sidebar,
+.prompt-card,
+.search-wrap,
+.icon-btn,
+.card-tag,
+.field input,
+.field select,
+.field textarea,
+.modal {
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
 body {
@@ -250,6 +284,34 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
   background: transparent;
   width: 100%;
 }
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle:hover { border-color: var(--rule-strong); background: var(--paper); }
+
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .results-meta {
   display: flex;
@@ -510,7 +572,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 
   .topbar { flex-wrap: wrap; }
   .search-wrap { max-width: none; order: 2; }
-  .btn-primary { order: 1; margin-left: auto; }
+  .topbar-actions { order: 1; margin-left: auto; }
 
   .field-row { grid-template-columns: 1fr; }
 }
