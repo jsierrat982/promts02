@@ -30,6 +30,7 @@ const el = {
   importInput: document.getElementById("importInput"),
   searchInput: document.getElementById("searchInput"),
   addPromptBtn: document.getElementById("addPromptBtn"),
+  themeToggle: document.getElementById("themeToggle"),
   activeCategoryTitle: document.getElementById("activeCategoryTitle"),
   resultsCount: document.getElementById("resultsCount"),
   promptGrid: document.getElementById("promptGrid"),
@@ -438,6 +439,37 @@ el.importInput.addEventListener("change", async () => {
   } finally {
     el.importInput.value = "";
   }
+});
+
+// ---------- tema claro / oscuro ----------
+
+const THEME_KEY = "promptVaultTheme";
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  el.themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  el.themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+  );
+}
+
+function currentTheme() {
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+}
+
+// El <script> inline en el <head> ya aplicó el atributo data-theme antes del
+// primer render (evita el parpadeo). Aquí solo sincronizamos el botón.
+applyTheme(currentTheme());
+
+el.themeToggle.addEventListener("click", () => {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
 });
 
 // ---------- sidebar móvil ----------
