@@ -3,11 +3,51 @@
     "Programación",
     "Escritura creativa",
     "Análisis de datos",
-    "Marketing",
     "Educación",
-    "Productividad"
+    "Productividad",
+    "Imágenes",
+    "Marketing"
   ],
   "prompts": [
+      "id": "cf4238f4-e9a0-49b4-b93b-d5743b330a1d",
+      "title": "Pixar IA",
+      "text": "Convierte esta imagen en un personaje animado de estilo Pixar, manteniendo un alto nivel de detalle en la textura del cabello y la ropa. La figura debe ser estilizada con proporciones ligeramente exageradas, como las que se ven en las películas de Pixar, donde la cabeza es un poco más grande y los ojos tienen un tamaño destacable. Los colores deben ser brillantes y vibrantes, con un estilo de iluminación suave y un fondo simple o nublado que no reste protagonismo al personaje. La persona debe tener una expresión amigable y cálida, con un estilo de cabello y ropa que respete la moda actual, pero adaptada al estilo de animación de Pixar",
+      "category": "Imágenes",
+      "tags": [
+        "Pixar"
+      ],
+      "createdAt": "2026-09-05T16:07:44.172Z"
+    },
+    {
+      "id": "98913514-00ac-47e7-9866-c5c95f2f7fd4",
+      "title": "Crear Logo",
+      "text": "Actúa como un diseñador gráfico de clase mundial. Crea un logo [estilo ejem: minimalista] para una marca de [Tu Nicho], usa una paleta de colores [Tus Colores] \"\" \"\"\"[(Texto: si quieres poner algún slogan mantén las comillas y corchetes cuando añadas tu texto)]\"\"\" y asegúrate que el Logo sea vectorizable'.\"",
+      "category": "Imágenes",
+      "tags": [
+        "Logo"
+      ],
+      "createdAt": "2026-09-05T16:01:12.985Z"
+    },
+    {
+      "id": "299d5d62-8edb-4251-80ec-78a922d433f1",
+      "title": "Crear APP Claude",
+      "text": "Claude chat\nAyúdame a generar un PRD\n\nClaude Design \nPegar el PRD\n\nClaude code\nPor favor construlle esto, pruébalo antes de que yo lo vea\n\nGitHub\nVercel",
+      "category": "Programación",
+      "tags": [
+        "App"
+      ],
+      "createdAt": "2026-09-05T15:59:22.176Z"
+    },
+    {
+      "id": "f698cfd7-5263-494b-b21e-15e69ba3e7db",
+      "title": "Imágenes en Hilo",
+      "text": "Aplica un efecto de bordado realista a esta imagen. El diseño debe verse con textura de hilo, volumen y relieve, como un parche profesional. Usa colores vibrantes y simula sombras suaves. Presenta el resultado sobre un fondo de tela neutra y clara. El resultado debe parecer una insignia bordada real",
+      "category": "Imágenes",
+      "tags": [
+        "hilo"
+      ],
+      "createdAt": "2026-09-05T15:57:43.695Z"
+    },
     {
       "id": "seed-001",
       "title": "Revisión de código con foco en seguridad",
