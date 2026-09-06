@@ -9,6 +9,7 @@
     "Marketing"
   ],
   "prompts": [
+    {
       "id": "cf4238f4-e9a0-49b4-b93b-d5743b330a1d",
       "title": "Pixar IA",
       "text": "Convierte esta imagen en un personaje animado de estilo Pixar, manteniendo un alto nivel de detalle en la textura del cabello y la ropa. La figura debe ser estilizada con proporciones ligeramente exageradas, como las que se ven en las películas de Pixar, donde la cabeza es un poco más grande y los ojos tienen un tamaño destacable. Los colores deben ser brillantes y vibrantes, con un estilo de iluminación suave y un fondo simple o nublado que no reste protagonismo al personaje. La persona debe tener una expresión amigable y cálida, con un estilo de cabello y ropa que respete la moda actual, pero adaptada al estilo de animación de Pixar",
